@@ -27,6 +27,11 @@ Results:
 | SD2.1, Faster=False             | 5.823 secs | 0.028 secs | 58.546    | 0.1513     |
 | SD2.1, Faster=True  (mod=50ls)  | 5.915 secs | 0.024 secs | 59.019    | 0.1532     |
 
+
+Evaluation:
+Faster-Diffusion demonstrated 1.7x speedup on RTX 3090 in the original paper's single-image benchmark. However on A40 with batch size 8 no meaningful speedup was observed, suggesting the method's benefits are hardware-dependent and most pronounced on memory-bandwidth-constrained consumer GPUs rather than high-throughput datacenter hardware.
+
+
 Usage:
 Open FasterDiffusion_SD15_SD21.ipynb in Jupyter and run all cells. The notebook handles COCO download, model loading, inference, and metric computation automatically.
 
