@@ -1,0 +1,13 @@
+accelerate
+diffusers>=0.20.0
+transformers
+torch
+torchvision
+torch-fidelity
+torchmetrics
+pillow
+tqdm
+numpy
+datasets
+huggingface-hub
+requests
