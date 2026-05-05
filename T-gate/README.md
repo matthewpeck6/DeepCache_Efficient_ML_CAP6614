@@ -8,8 +8,8 @@ Hardware: Tested on Google Colab L4 GPUs.
 
 Dataset: COCO val2017 (1000 images)  
 Metrics: FID, CLIP Score, mean inference time, speedup ratio, peak VRAM  
-Steps: 25 DDIM steps  
 Batch size: 32  
+Steps: 25
 Gate Step: 10 (cross-attention cached after step 10 out of 25)
 
 ## Results
@@ -26,15 +26,3 @@ Gate Step: 10 (cross-attention cached after step 10 out of 25)
 | SD2.1, TGATE=False | 0 hrs 37 mins 55 secs | 0.342 secs | 0.692 secs | 29.495 | 0.1484 | 2.91 img/s | 22.96 GB |
 | SD2.1, TGATE=True  | 0 hrs 29 mins 36 secs | 0.242 secs | 0.511 secs | 34.071 | 0.1531 | 4.12 img/s | 21.29 GB |
 
-
-## Usage
-
-Install dependencies:
-```
-pip install -r requirements.txt
-```
-
-Run the experiment:
-```
-python tgate_experiment.py
-```
