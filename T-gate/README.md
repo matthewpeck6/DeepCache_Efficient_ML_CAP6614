@@ -2,15 +2,12 @@
 
 Folder containing the code and requirements to re-create the metrics for TGATE applied to Stable Diffusion (SD).
 
-TGATE accelerates diffusion model inference by caching cross-attention outputs after a specified gate step, reusing them for the remaining denoising steps without any training or fine-tuning.
+Achieves 1.40x speedup on SD1.5 and 1.42x on SD2.1 with minimal impact on CLIP score and slight FID degradation on SD2.1
 
 Hardware: Tested on Google Colab L4 GPUs.
 
-Dataset: COCO val2017 (1000 images)  
-Metrics: FID, CLIP Score, mean inference time, speedup ratio, peak VRAM  
-Batch size: 32  
-Steps: 25
-Gate Step: 10 (cross-attention cached after step 10 out of 25)
+Dataset: COCO val2017 (1000 images) Metrics: FID, CLIP Score, mean inference time, speedup ratio Steps: 25 DDIM steps Batch size: 8
+
 
 ## Results
 
@@ -26,3 +23,4 @@ Gate Step: 10 (cross-attention cached after step 10 out of 25)
 | SD2.1, TGATE=False | 0 hrs 37 mins 55 secs | 0.342 secs | 0.692 secs | 29.495 | 0.1484 | 2.91 img/s | 22.96 GB |
 | SD2.1, TGATE=True  | 0 hrs 29 mins 36 secs | 0.242 secs | 0.511 secs | 34.071 | 0.1531 | 4.12 img/s | 21.29 GB |
 
+Reference: Liu, H., Zeng, W., Chen, R., & Hou, X. (2024). TGATE: Cross-Attention Makes Inference Caching Viable in Diffusion Transformers. arXiv:2404.02747.
