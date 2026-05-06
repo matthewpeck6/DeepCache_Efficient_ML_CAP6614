@@ -22,3 +22,7 @@ Results:
 
 Evaluation: Achieves 2.3x speedup on Stable Diffusion v1.5 with only 0.05 CLIP Score decrease, and 4.1x speedup on LDM-4 (ImageNet) with 0.22
 FID increase -- all without any training or fine-tuning.
+
+Usage: Open DeepCache_SD15_SD21.ipynb in Jupyter and run all cells. The notebook handles COCO download, model loading, inference, and metric computation automatically.
+
+References
