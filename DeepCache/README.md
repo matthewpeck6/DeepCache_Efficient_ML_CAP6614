@@ -25,4 +25,4 @@ FID increase -- all without any training or fine-tuning.
 
 Usage: Open DeepCache_SD15_SD21.ipynb in Jupyter and run all cells. The notebook handles COCO download, model loading, inference, and metric computation automatically.
 
-References
+Reference: Ma, X., Fang, G., & Wang, X. (2023). DeepCache: Accelerating Diffusion Models for Free. arXiv:2312.00858.
